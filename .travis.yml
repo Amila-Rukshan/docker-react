@@ -6,6 +6,9 @@ services:
 before_script:
   - docker build -t amila/docker-react .
 
+script:
+  - docker run amila/docker-react
+
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
