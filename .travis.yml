@@ -4,10 +4,10 @@ services:
   - docker
 
 before_script:
-  - docker build -t amila/docker-react -f Dockerfile.dev .
+  - docker build -t amila/docker-react .
 
 script:
-  - docker run amila/docker-react
+  - docker run amila/docker-react npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
